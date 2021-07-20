@@ -33,11 +33,11 @@ public class Form1 : Form // creamos una clase que hereda de windows forms, asi 
 	{
 		this.Text = "Form1"; //agregamos el titulo a este formulario
 		label1 = new Label(); //creamos el objeto de la clase de la forma que deseamos en este caso label()
-		label1.Size = new Size(250,20); // definimos el atributo del tamaño mediante la creacion de un objeto que utiliza el metodo Size, donde l priemr parametro es el ancho , y el segundo la altura
+		label1.Size = new Size(250,20); // definimos el atributo del tamaÃ±o mediante la creacion de un objeto que utiliza el metodo Size, donde l priemr parametro es el ancho , y el segundo la altura
 		label1.Location = new Point(50,10);// definimos el atributo de la localizacion mediante la creacion de un objeto que utiliza el metodo Point con parametros de dsitancia en x de 60 y distancia en y(desde arriba del formulario) en 10
 		label1.Text="Formulario desde consola";// definimos el atributo del texto que queremos que se muestre .
-		label1.Font = new Font("Matura MT Script Capitals",13F);// definimos el atributo de la fuente mediante el objeto que utiliza el metodo Font donde de aparametros le decimos el nombre del a fuente y despues el tamaño de esa fuente
-		this.Controls.Add(label1); // importante este, para poder agregar la forma que creamos al formulario, son esta linea correria epro no se mostraria nada.
+		label1.Font = new Font("Matura MT Script Capitals",13F);// definimos el atributo de la fuente mediante el objeto que utiliza el metodo Font donde de aparametros le decimos el nombre del a fuente y despues el tamaÃ±o de esa fuente
+		this.Controls.Add(label1); // importante este, para poder agregar la forma que creamos al formulario, sin esta linea correria, pero no se mostraria nada.
 		
 		label2 = new Label(); 
 		label2.Size = new Size(100,20); 
@@ -77,13 +77,13 @@ public class Form1 : Form // creamos una clase que hereda de windows forms, asi 
                        "Zapatos",
                        "Interiores",
 		       ""}); // ponemos un valor vacio para que despues coja este al hacer click para un nuevo registro
-		comboBox1.DropDownStyle = ComboBoxStyle.DropDownList; // definimos que la combobox solo pueda ser una lista y no se pueda copir ningun texto encima por parte del usuario
+		comboBox1.DropDownStyle = ComboBoxStyle.DropDownList; // definimos que la combobox solo pueda ser una lista y no se pueda copiar ningun texto encima por parte del usuario
 		this.Controls.Add(comboBox1);
 
 		panel1 = new Panel();
 		panel1.Size = new Size(240,130); 
 		panel1.Location = new Point(20,120);
-		panel1.BorderStyle = BorderStyle.Fixed3D; // es necesario ponerle borde para que podamos realmente observarlo si no estar presente pero no nos daremos cuenta en dodne esta puesto
+		panel1.BorderStyle = BorderStyle.Fixed3D; // es necesario ponerle borde, para que podamos realmente observarlo si no estarÃ¡ presente pero no nos daremos cuenta en donde esta puesto
 		this.Controls.Add(panel1);
 		
 		checkBox1 = new CheckBox();
@@ -94,7 +94,7 @@ public class Form1 : Form // creamos una clase que hereda de windows forms, asi 
 		label5 = new Label(); 
 		label5.Size = new Size(60,30); 
 		label5.Location = new Point(20,10);
-		label5.Text="¿Cliente antiguo?";
+		label5.Text="Â¿Cliente antiguo?";
 		panel1.Controls.Add(label5);
 		
 		checkBox2 = new CheckBox();
@@ -105,18 +105,18 @@ public class Form1 : Form // creamos una clase que hereda de windows forms, asi 
 		label6 = new Label(); 
 		label6.Size = new Size(60,30); 
 		label6.Location = new Point(20,50);
-		label6.Text="¿Paga en efectivo?";
+		label6.Text="Â¿Paga en efectivo?";
 		panel1.Controls.Add(label6);
 
 		checkBox3 = new CheckBox();
-		checkBox3.Location = new Point(75,90); // la ubicacion ase hace respecto al panel
+		checkBox3.Location = new Point(75,90); 
 		checkBox3.Size = new Size(25,25); 
-		panel1.Controls.Add(checkBox3); // agregamos las figuras al panel
+		panel1.Controls.Add(checkBox3); 
 
 		label7 = new Label(); 
 		label7.Size = new Size(60,30); 
 		label7.Location = new Point(20,90);
-		label7.Text="¿Aplica Puntos?";
+		label7.Text="Â¿Aplica Puntos?";
 		panel1.Controls.Add(label7);
 
 		button1 = new Button(); 
@@ -125,15 +125,11 @@ public class Form1 : Form // creamos una clase que hereda de windows forms, asi 
    		button1.Text = "Ingresar Datos";
    		panel1.Controls.Add(button1);
 			
-		//string estado ="";
-		//string pago="";
-		//string puntos="";		
-
 		
-		//checkBox2.Checked==true	? pago= "Pago en efectivo" : pago= "pago diferente a efectivo";
-		//checkBox3.Checked==true ? puntos= "aplica puntos" : puntos= "No aplica puntos";
+		
+		
 
-		button1.Click += new EventHandler(button1_Click); // añadimos el control para que se active el metodo "button1_Click" al hacer click en el boton
+		button1.Click += new EventHandler(button1_Click); // aÃ±adimos el control para que se active el metodo "button1_Click" al hacer click en el boton
 		
 		
 	}
@@ -141,7 +137,7 @@ public class Form1 : Form // creamos una clase que hereda de windows forms, asi 
 	private void button1_Click(object sender, EventArgs e)// se define un metodo de evento click que al ser este llamado realizara lo que pongamos en el cuerpo
 	
 	{
-		//+ "y hace el "+pago +"y "+ puntos
+		
 
 		string estado = "";
 		if(checkBox1.Checked == true){ 
